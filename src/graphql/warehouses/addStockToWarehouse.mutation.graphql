@@ -1,0 +1,12 @@
+mutation AddStockToWarehouse($productId: Int!, $quantity: Int!, $warehouseId: Int!, $description: String) {
+    addStockToWarehouse(product_id: $productId, quantity: $quantity, warehouse_id: $warehouseId, description: $description) {
+        ... on Error {
+            error
+        }
+        ... on MutationAddStockToWarehouseSuccess {
+            data {
+                id
+            }
+        }
+    }
+}

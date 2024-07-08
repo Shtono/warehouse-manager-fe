@@ -1,0 +1,11 @@
+query Warehouses($customerId: Int!) {
+    warehouses(customer_id: $customerId) {
+        capacity
+        current_capacity
+        customer_id
+        hazardous
+        id
+        location
+        name
+    }
+}

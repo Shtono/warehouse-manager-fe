@@ -1,0 +1,6 @@
+mutation DeleteWarehouse($deleteWarehouseId: Int!) {
+    deleteWarehouse(id: $deleteWarehouseId) {
+        id
+        name
+    }
+}

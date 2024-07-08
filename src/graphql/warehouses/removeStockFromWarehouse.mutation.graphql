@@ -1,0 +1,12 @@
+mutation RemoveStockFromWarehouse($containerId: Int!, $warehouseId: Int!, $description: String) {
+    removeStockFromWarehouse(container_id: $containerId, warehouse_id: $warehouseId, description: $description) {
+        ... on Error {
+            error
+        }
+        ... on MutationRemoveStockFromWarehouseSuccess {
+            data {
+                id
+            }
+        }
+    }
+}

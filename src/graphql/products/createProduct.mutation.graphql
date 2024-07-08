@@ -1,0 +1,6 @@
+mutation CreateProductMutation($customerId: Int!, $description: String!, $hazardous: Boolean!, $name: String!, $price: Float!, $size: Float!) {
+    createProduct(customer_id: $customerId, description: $description, hazardous: $hazardous, name: $name, price: $price, size: $size) {
+        id
+        name
+    }
+}

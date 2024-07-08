@@ -1,0 +1,25 @@
+query WarehousesTableData($customerId: Int!) {
+    warehouses(customer_id: $customerId) {
+        id
+        name
+        location
+        capacity
+        current_capacity
+        hazardous
+        created_at
+        updated_at
+        containers {
+            id
+            size
+            quantity
+            state
+            product {
+                id
+                hazardous
+                name
+                price
+                description
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+query ProductsTableQuery($customerId: Int!) {
+    products(customer_id: $customerId) {
+        id
+        name
+        description
+        price
+        size
+        hazardous
+        created_at
+        updated_at
+        containers {
+            quantity
+            size
+            state
+            warehouse {
+                id
+                name
+                current_capacity
+                capacity
+            }
+        }
+    }
+}

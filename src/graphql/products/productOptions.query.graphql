@@ -1,0 +1,7 @@
+query ProductOptions($customerId: Int!) {
+    products(customer_id: $customerId) {
+        id
+        name
+        hazardous
+    }
+}

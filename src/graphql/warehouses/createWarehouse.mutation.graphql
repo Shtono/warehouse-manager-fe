@@ -1,0 +1,6 @@
+mutation CreateWarehouse($capacity: Float!, $customerId: Int!, $hazardous: Boolean!, $location: String!, $name: String!) {
+    createWarehouse(capacity: $capacity, customer_id: $customerId, hazardous: $hazardous, location: $location, name: $name) {
+        id
+        name
+    }
+}

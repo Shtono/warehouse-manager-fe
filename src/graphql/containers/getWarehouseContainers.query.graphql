@@ -1,0 +1,12 @@
+query GetWarehouseContainers($warehouseId: Int!) {
+    containers(warehouse_id: $warehouseId) {
+        state
+        id
+        quantity
+        size
+        product {
+            id
+            name
+        }
+    }
+}

@@ -1,0 +1,18 @@
+query WarehouseInfo($customerId: Int!) {
+    warehouses(customer_id: $customerId) {
+        id
+        name
+        current_capacity
+        capacity
+        hazardous
+        location
+        movement_logs {
+            created_at
+            description
+            id
+            movement_type
+            quantity
+            warehouse_current_capacity
+        }
+    }
+}
